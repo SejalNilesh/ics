@@ -2,61 +2,15 @@ package cizercipher;
 
 import java.util.*;
 
-//public class code {
-
-//	public static void main(String[] args) {
-
-////		char k=(char)('k'-3);
-
-////		System.out.println(k);
-
-//		
-
-//		Scanner sc=new Scanner(System.in);
-
-//		System.out.println("Enter String");
-
-//		String st=sc.nextLine();
-
-//	
-
-//		StringBuilder sb=new StringBuilder();
-
-//		char k='a';
-
-//		for(int i=0;i<st.length();i++) {
-
-//			k=(char)((st.charAt(i)+3)%26);
-
-//			sb.append(k);
-
-//		}
-
-//		String resultString = sb.toString();
-
-//		System.out.println(resultString);
-
-//		sc.close();
-
-//	}
-
-//} 
 
 
-
-
-
-import java.util.*;
-
-
-
-public class code {
+public class cizer {
 
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter String (lowercase letters only for this example):");
+        System.out.println("Enter String :");
 
         String st = sc.nextLine();
 
@@ -72,30 +26,19 @@ public class code {
 
             char originalChar = st.charAt(i);
 
-
-
-            
-
-            if (originalChar >= 'a' && originalChar <= 'z') {
-
-                
-
-                int offset = originalChar - 'a';
-
-                int shiftedOffset = (offset + shift) % 26;
-
-                char newChar = (char) ('a' + shiftedOffset);
-
-                
-
-                sb.append(newChar);
-
-            } else {
-
+            if(Character.isLowerCase(originalChar)){
+                int offset=originalChar-'a';
+                int shiftedOffset=(offset+shift)%26;
+                char ans=(char)('a'+shiftedOffset);
+                sb.append(ans);
+            }else if(Character.isUpperCase(originalChar)){
+                int offset=originalChar-'A';
+                int shiftedOffset=(offset+shift)%26;
+                char ans=(char)('A'+shiftedOffset);
+                sb.append(ans);
+            }else{
                 sb.append(originalChar);
-
             }
-
         }
 
 
