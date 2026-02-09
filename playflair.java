@@ -1,4 +1,4 @@
-package playfair;
+
 
 
 
@@ -10,7 +10,7 @@ import java.util.*;
 
 
 
-public class play {
+public class playflair{
 
 
 
@@ -22,7 +22,7 @@ public class play {
 
     // Constructor: builds the key table
 
-    public play(String key) {
+    public playflair(String key) {
 
         buildTable(key);
 
@@ -246,7 +246,7 @@ public class play {
 
     public static void main(String[] args) {
 
-        play cipher = new play("sejal");
+        playflair cipher = new playflair("sejal");
 
 
 
